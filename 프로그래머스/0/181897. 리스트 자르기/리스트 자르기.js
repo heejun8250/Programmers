@@ -8,7 +8,7 @@ function solution(n, s, nList) {
   } else if (n === 3) {
     a = nList.slice(s[0], s[1] + 1)
   } else {
-    a = nList.slice(s[0], s[1] + 1).filter((_, i) => i % 2 === 0)
+    a = nList.slice(s[0], s[1] + 1).filter((_, i) => i % s[2] === 0)
   }
 
   return a;
