@@ -1,15 +1,7 @@
-function solution(str_list) {
-  let answer = [];
-  let idx = 0;
-  for (let i of str_list) {
-    if (i === 'l') {
-      answer = str_list.slice(0, idx);
-      break;
-    } else if (i === 'r') {
-      answer = str_list.slice(idx + 1);
-      break;
-    }
-    idx++;
+function solution(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'l') return arr.slice(0, i);
+    if (arr[i] === 'r') return arr.slice(i + 1);
   }
-  return answer;
+  return [];
 }
