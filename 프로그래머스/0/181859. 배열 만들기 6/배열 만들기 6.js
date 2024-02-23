@@ -10,8 +10,7 @@ function solution(arr) {
     } else if (stk.length > 0 && stk[stk.length - 1] === arr[i]) {
       stk.pop()
       i++
-    }
-    else if (stk.length > 0 && stk[stk.length - 1] !== arr[i]) {
+    } else {
       stk.push(arr[i])
       i++
     }
